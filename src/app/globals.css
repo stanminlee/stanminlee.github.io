@@ -5,12 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #0070f3;
+  --secondary: #1a1a1a;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #0070f3;
+    --secondary: #f2f2f2;
   }
 }
 
@@ -18,10 +22,208 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  padding: 2rem;
+  text-align: left;
+}
+
+.header, .footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main {
+  margin-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-geist-sans);
+  font-weight: 700; /* Adjust weight as needed */
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-family: var(--font-geist-sans);
+  font-weight: 700; /* Adjust weight as needed */
+}
+
+p {
+  font-family: var(--font-geist-sans);
+  font-weight: 400; /* Adjust weight as needed */
+  margin-bottom: 0.5rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  flex-shrink: 0;
+}
+
+.profile-info {
+  flex-grow: 1;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.profile-info h1 {
+  margin: 0;
+}
+
+.profile-info p {
+  margin: 0;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: var(--primary);
+  font-size: 1rem; /* Adjust the size to make it visible */
+  display: inline-block; /* Ensure the icons are inline */
+  margin-right: 0.5rem; /* Add some space between the icons */
+}
+
+.social-icons a:hover {
+  color: var(--secondary);
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary);
+  left: 20px;
+  margin-left: -2px;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 0 0 2rem 40px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  top: 0;
+  left: -26px; /* Adjust left position to align with the line */
+  border: 2px solid var(--background);
+}
+
+.timeline-content {
+  padding: 0.5rem 0;
+  margin-left: 20px; /* Ensure content is aligned with the dot */
+}
+
+.project-item {
+  margin-bottom: 1.5rem;
+}
+
+.project-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-item p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+.project-title:hover {
+  color: var(--primary); /* Optional: Change color on hover */
+  text-decoration: none;
+}
+
+.project-title:active {
+  color: var(--secondary); /* Change color slightly on click */
+}
+
+.footer {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social-icons {
+  margin-top: 0.5rem;
+}
+
+.footer-social-icons a {
+  margin: 0 0.5rem;
+}
+
+.footer-social-icons a:hover {
+  color: var(--secondary);
+}
+
+.arrow-link {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+.arrow-link:hover {
+  color: var(--primary); /* Optional: Change color on hover */
+  text-decoration: none;
+}
+
+.back-arrow {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+.back-arrow:hover {
+  color: var(--primary); /* Optional: Change color on hover */
+  text-decoration: none;
 }
