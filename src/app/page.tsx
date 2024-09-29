@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightLong, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Project from "../components/Project"; // Import the Project component
 
 export default function Home() {
@@ -22,11 +22,14 @@ export default function Home() {
             <h1>Andrew Shi</h1>
             <p>CS + AI @ Stanford</p>
             <div className="social-icons">
-              <a href="https://www.linkedin.com/in/acshi" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/acshi/" target="_blank" rel="noopener noreferrer" style={{ marginRight: "1rem" }}>
                 <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "1.5rem" }}/>
               </a>
-              <a href="https://github.com/andrewcshi" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/andrewcshi" target="_blank" rel="noopener noreferrer" style={{ marginRight: "1rem" }}>
                 <FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.5rem" }}/>
+              </a>
+              <a href="mailto:acshi@stanford.edu" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: "1.5rem" }}/>
               </a>
             </div>
           </div>
@@ -109,6 +112,9 @@ export default function Home() {
             </a>
             <a href="https://github.com/andrewcshi" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.5rem" }}/>
+            </a>
+            <a href="mailto:acshi@stanford.edu" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: "1.5rem" }}/>
             </a>
           </div>
         </div>
