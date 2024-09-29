@@ -6,7 +6,7 @@ const PianoAwards: React.FC = () => {
   return (
     <div className="container">
       <header className="header">
-        <h1>Piano Awards</h1>
+        <h1>Piano</h1>
       </header>
       <main className="main">
         <section>
