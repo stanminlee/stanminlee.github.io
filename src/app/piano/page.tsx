@@ -44,11 +44,7 @@ const PianoAwards: React.FC = () => {
           </ul>
 
           <a
-            href={
-              process.env.NODE_ENV === "production"
-                ? "/website"
-                : "/"
-            }
+            href="/website"
             className="back-arrow"
             style={{ fontWeight: "bold" }}
           >
