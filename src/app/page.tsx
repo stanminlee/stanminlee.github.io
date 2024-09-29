@@ -83,7 +83,7 @@ export default function Home() {
         <section style={{ marginBottom: "2rem" }}>
           <h2>Projects</h2>
           <Project
-            title="Fine-tuning CodeLlama-7B on Synthetic Data for FORTRAN Code Generation with PEFT"
+            title="Fine-tuning CodeLlama-7B for FORTRAN Code Generation using PEFT"
             description="Received Outstanding Custom Project Award from Prof. Tatsunori Hashimoto and Prof. Diyi Yang in Stanford's CS 224N (Natural Language Processing)."
             link="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/final-projects/AndrewCShiSohamGovandeTaeukKang.pdf"
           />
