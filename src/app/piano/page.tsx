@@ -44,7 +44,7 @@ const PianoAwards: React.FC = () => {
           </ul>
 
           <a
-            href="/website"
+            href="/"
             className="back-arrow"
             style={{ fontWeight: "bold" }}
           >

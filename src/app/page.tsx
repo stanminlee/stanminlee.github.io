@@ -87,11 +87,7 @@ export default function Home() {
           <h2>Piano Performance</h2>
           <p>I am a four-time National YoungArts winner, three-time California State First-Prize winner, and was admitted to the Julliard School in 2022.</p>
           <a
-            href={
-              process.env.NODE_ENV === "production"
-                ? "/website/piano"
-                : "/piano"
-            }
+            href="/piano"
             className="arrow-link"
             style={{ fontWeight: "bold" }}
           >
