@@ -43,7 +43,7 @@ const PianoAwards: React.FC = () => {
             <li>Carl Vine | Five Bagatelles, Op. 10</li>
           </ul>
 
-          <a href="/" className="back-arrow">
+          <a href="/" className="back-arrow" style={{ fontWeight: "bold" }}>
             <FontAwesomeIcon icon={faArrowLeftLong} style={{ marginRight: "0.5rem" }} />
             Home
           </a>

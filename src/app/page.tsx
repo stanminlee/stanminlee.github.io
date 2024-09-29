@@ -11,7 +11,7 @@ export default function Home() {
         <div className="profile">
           <div className="profile-image">
             <Image
-              src="./andrew.jpeg"
+              src="/andrew.jpeg"
               alt="Profile Picture"
               width={175}
               height={175}
@@ -86,14 +86,14 @@ export default function Home() {
         <section style={{ marginBottom: "2rem" }}>
           <h2>Piano Performance</h2>
           <p>I am a four-time National YoungArts winner, three-time California State First-Prize winner, and was admitted to the Julliard School in 2022.</p>
-          <a href="/piano" className="arrow-link" >
+          <a href="/piano" className="arrow-link" style={{ fontWeight: "bold" }}>
             Accolades and Performances
             <FontAwesomeIcon icon={faArrowRightLong} style={{ marginLeft: "0.5rem" }} />
           </a>
         </section>
         <section>
           <h2>Contact</h2>
-          <p>acshi at stanford dot edu</p>
+          <p>acshi [at] stanford [dot] edu</p>
         </section>
       </main>
       <footer className="footer">
