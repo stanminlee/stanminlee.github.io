@@ -86,7 +86,15 @@ export default function Home() {
         <section style={{ marginBottom: "2rem" }}>
           <h2>Piano Performance</h2>
           <p>I am a four-time National YoungArts winner, three-time California State First-Prize winner, and was admitted to the Julliard School in 2022.</p>
-          <a href="/piano" className="arrow-link" style={{ fontWeight: "bold" }}>
+          <a
+            href={
+              process.env.NODE_ENV === "production"
+                ? "/website/piano"
+                : "/piano"
+            }
+            className="arrow-link"
+            style={{ fontWeight: "bold" }}
+          >
             Accolades and Performances
             <FontAwesomeIcon icon={faArrowRightLong} style={{ marginLeft: "0.5rem" }} />
           </a>
