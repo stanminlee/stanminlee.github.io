@@ -34,37 +34,37 @@ const PianoAwards: React.FC = () => {
           <h2 style={{ marginTop: "1rem" }}>Featured Performances</h2>
           <ul style={{ marginBottom: "2rem" }}>
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer" className="performance-link">
+              <a href="https://youtu.be/i01xAg1dlxI?si=NAGyW_LzOSGl-mL9" target="_blank" rel="noopener noreferrer" className="performance-link">
                 Johann Sebastian Bach | Prelude and Fugue in D major, BK 2, BWV 874
               </a>
             </li>
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer" className="performance-link">
+              <a href="https://youtu.be/85ehsAqoLcQ?si=iCk9zoT6I0_7ILiN" target="_blank" rel="noopener noreferrer" className="performance-link">
                 Wolfgang Amadeus Mozart | Sonata in F Major, K. 332
               </a>
             </li>
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer" className="performance-link">
+              <a href="https://youtu.be/Y7H-p1apY2I?si=FR52-h0uQ76dMl3j" target="_blank" rel="noopener noreferrer" className="performance-link">
                 Ludwig van Beethoven | Piano Concerto No. 3 in C Minor, Op. 37, I. Allegro con brio
               </a>
             </li>
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer" className="performance-link">
+              <a href="https://youtu.be/Z4Enexm2zAk?si=WfbzmwyU-RA6pIx5" target="_blank" rel="noopener noreferrer" className="performance-link">
                 Sergei Rachmaninoff | Sonata No. 2, Op. 36, I. Allegro agitato
               </a>
             </li>
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer" className="performance-link">
+              <a href="https://youtu.be/l7gq0ZXysIA?si=VIGhI3oa1_7Z5Wpt" target="_blank" rel="noopener noreferrer" className="performance-link">
                 Frédéric Chopin | Scherzo No. 3 in C-sharp minor, Op. 39
               </a>
             </li>
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer" className="performance-link">
+              <a href="https://youtu.be/l7gq0ZXysIA?si=VIGhI3oa1_7Z5Wpt" target="_blank" rel="noopener noreferrer" className="performance-link">
                 William Bolcom | The Garden of Eden, III. The Serpent's Kiss
               </a>
             </li>
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer" className="performance-link">
+              <a href="https://youtu.be/e9xUj-Bdd0M?si=BLUaPsJDRo1qOc85" target="_blank" rel="noopener noreferrer" className="performance-link">
                 Carl Vine | Five Bagatelles, Op. 10
               </a>
             </li>
