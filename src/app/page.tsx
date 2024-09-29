@@ -11,7 +11,7 @@ export default function Home() {
         <div className="profile">
           <div className="profile-image">
             <Image
-              src="/andrew.jpeg"
+              src="./andrew.jpeg"
               alt="Profile Picture"
               width={175}
               height={175}
