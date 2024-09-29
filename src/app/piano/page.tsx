@@ -49,13 +49,13 @@ const PianoAwards: React.FC = () => {
               </a>
             </li>
             <li>
-              <a href="https://youtu.be/Z4Enexm2zAk?si=WfbzmwyU-RA6pIx5" target="_blank" rel="noopener noreferrer" className="performance-link">
-                Sergei Rachmaninoff | Sonata No. 2, Op. 36, I. Allegro agitato
+              <a href="https://youtu.be/l7gq0ZXysIA?si=VIGhI3oa1_7Z5Wpt" target="_blank" rel="noopener noreferrer" className="performance-link">
+                Frédéric Chopin | Scherzo No. 3 in C-sharp minor, Op. 39
               </a>
             </li>
             <li>
-              <a href="https://youtu.be/l7gq0ZXysIA?si=VIGhI3oa1_7Z5Wpt" target="_blank" rel="noopener noreferrer" className="performance-link">
-                Frédéric Chopin | Scherzo No. 3 in C-sharp minor, Op. 39
+              <a href="https://youtu.be/Z4Enexm2zAk?si=WfbzmwyU-RA6pIx5" target="_blank" rel="noopener noreferrer" className="performance-link">
+                Sergei Rachmaninoff | Sonata No. 2, Op. 36, I. Allegro agitato
               </a>
             </li>
             <li>
