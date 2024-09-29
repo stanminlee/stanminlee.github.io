@@ -113,6 +113,7 @@ p {
 
 .social-icons a:hover {
   color: var(--secondary);
+  transition: color 0.3s ease;
 }
 
 .timeline {
@@ -179,6 +180,7 @@ p {
 .project-title:hover {
   color: var(--primary); /* Optional: Change color on hover */
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .project-title:active {
@@ -206,6 +208,7 @@ p {
 
 .footer-social-icons a:hover {
   color: var(--secondary);
+  transition: color 0.3s ease;
 }
 
 .arrow-link {
@@ -216,6 +219,7 @@ p {
 .arrow-link:hover {
   color: var(--primary); /* Optional: Change color on hover */
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .back-arrow {
@@ -226,4 +230,40 @@ p {
 .back-arrow:hover {
   color: var(--primary); /* Optional: Change color on hover */
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.performance-link {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+.performance-link:hover {
+  color: var(--primary); /* Optional: Change color on hover */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.company-link {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease;
+}
+
+.company-link:hover {
+  color: var(--primary); /* Optional: Change color on hover */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--primary); /* Optional: Change color on hover */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }

@@ -47,21 +47,33 @@ export default function Home() {
           <div className="timeline">
             <div className="timeline-item">
               <div className="timeline-content">
-                <h3>The Voleon Group</h3>
+                <h3>
+                  <a href="https://voleon.com/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    The Voleon Group
+                  </a>
+                </h3>
                 <p>Trading Intern</p>
                 <p>Jun 2024 - Aug 2024</p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-content">
-                <h3>Stanford Human-Centered AI Institute</h3>
+                <h3>
+                  <a href="https://hai.stanford.edu/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    Stanford Human-Centered AI Institute
+                  </a>
+                </h3>
                 <p>Research Assistant</p>
                 <p>Oct 2023 - Jun 2024</p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-content">
-                <h3>D.A. Davidson & Co.</h3>
+                <h3>
+                  <a href="https://www.dadavidson.com/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    D.A. Davidson & Co.
+                  </a>
+                </h3>
                 <p>Summer Analyst</p>
                 <p>Jun 2023 - Aug 2023</p>
               </div>
@@ -100,7 +112,11 @@ export default function Home() {
         </section>
         <section>
           <h2>Contact</h2>
-          <p>acshi [at] stanford [dot] edu</p>
+          <p>
+            <a href="mailto:acshi@stanford.edu" target="_blank" rel="noopener noreferrer" className="contact-link">
+              acshi [at] stanford [dot] edu
+            </a>
+          </p>
         </section>
       </main>
       <footer className="footer">
