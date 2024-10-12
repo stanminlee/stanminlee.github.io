@@ -52,7 +52,7 @@ export default function Home() {
                     Stanford AI Lab
                   </a>
                 </h3>
-                <p>Undergraduate Researcher @ Hazy</p>
+                <p>Researcher @ Hazy</p>
                 <p>Oct 2024 - Present</p>
               </div>
             </div>
