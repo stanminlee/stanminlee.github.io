@@ -48,6 +48,17 @@ export default function Home() {
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>
+                  <a href="https://hazyresearch.stanford.edu/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    Stanford AI Lab
+                  </a>
+                </h3>
+                <p>Undergraduate Researcher @ Hazy</p>
+                <p>Oct 2024 - Present</p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h3>
                   <a href="https://voleon.com/" target="_blank" rel="noopener noreferrer" className="company-link">
                     The Voleon Group
                   </a>
