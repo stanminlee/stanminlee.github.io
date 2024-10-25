@@ -16,7 +16,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, link }) => {
       ) : (
         <h4 className="text-xl font-semibold">{title}</h4>
       )}
-      <p className="text-gray-600">{description}</p>
+      <p style={{ color: "1a1a1a" }}>{description}</p>
     </div>
   );
 };
