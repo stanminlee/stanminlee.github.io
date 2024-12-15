@@ -71,7 +71,7 @@ export default function Home() {
           <h2>Projects</h2>
           <Project
             title="Rasterization Accelerator"
-            description="Awarded top bracket performance (perfect score) in Stanford Fall 2024 EE 271 Optimization Contest."
+            description="Awarded top brccket performance (perfect score) in Stanford Fall 2024 EE 271 Optimization Contest."
             link="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/final-projects/AndrewCShiSohamGovandeTaeukKang.pdf"
           />
         </section>
