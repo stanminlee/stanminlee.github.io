@@ -11,7 +11,7 @@ export default function Home() {
         <div className="profile">
           <div className="profile-image">
             <Image
-              src="/andrew.jpeg"
+              src="/StanLeeHeadshot-min.jpg"
               alt="Profile Picture"
               width={175}
               height={175}
@@ -19,16 +19,16 @@ export default function Home() {
             />
           </div>
           <div className="profile-info" style={{ marginLeft: "4rem" }}>
-            <h1>Andrew Shi</h1>
-            <p>CS + AI @ Stanford</p>
+            <h1>Stan Lee</h1>
+            <p>B.S. Candidate, Electrical Engineering | Stanford</p>
             <div className="social-icons">
-              <a href="https://www.linkedin.com/in/acshi/" target="_blank" rel="noopener noreferrer" style={{ marginRight: "1rem" }}>
+              <a href="https://www.linkedin.com/in/stanminlee/" target="_blank" rel="noopener noreferrer" style={{ marginRight: "1rem" }}>
                 <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "1.5rem" }}/>
               </a>
-              <a href="https://github.com/andrewcshi" target="_blank" rel="noopener noreferrer" style={{ marginRight: "1rem" }}>
+              <a href="https://github.com/stanminlee" target="_blank" rel="noopener noreferrer" style={{ marginRight: "1rem" }}>
                 <FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.5rem" }}/>
               </a>
-              <a href="mailto:acshi@stanford.edu" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:slee93@stanford.edu" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: "1.5rem" }}/>
               </a>
             </div>
@@ -37,9 +37,9 @@ export default function Home() {
       </header>
       <main className="main">
         <section style={{ marginBottom: "2rem" }}>
-          <h2>About Me</h2>
           <p>
-            I'm a junior at Stanford pursuing a BS in Computer Science, concentrating in AI and Systems. I'm also a classically-trained pianist and have performed and competed on international stages.
+          Hey, I'm Stan. I'm an undergraduate at Stanford studying Electrical Engineering, and
+          I'm interested in integrated circuits and electronic design automation.
           </p>
         </section>
         <section>
@@ -48,45 +48,26 @@ export default function Home() {
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>
-                  <a href="https://hazyresearch.stanford.edu/" target="_blank" rel="noopener noreferrer" className="company-link">
-                    Stanford AI Lab
+                  <a href="https://www.silimate.com/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    Silimate (YC S23)
                   </a>
                 </h3>
-                <p>Researcher @ Hazy</p>
-                <p>Oct 2024 - Present</p>
+                <p>Software Intern (Part-time) | October 2024 - December 2024</p>
+                <p>Developed a nightly-run testing platform using Pytest, AWS, and GitHub Actions to ensure robust operation of shipped software tools,
+                  and benchmarked software Design Space Exploration (DSE) capabilities.</p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>
-                  <a href="https://voleon.com/" target="_blank" rel="noopener noreferrer" className="company-link">
-                    The Voleon Group
+                  <a href="https://rsg.stanford.edu/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    Robust Systems Group
                   </a>
                 </h3>
-                <p>Trading Intern</p>
-                <p>Jun 2024 - Aug 2024</p>
-              </div>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-content">
-                <h3>
-                  <a href="https://hai.stanford.edu/" target="_blank" rel="noopener noreferrer" className="company-link">
-                    Stanford Human-Centered AI Institute
-                  </a>
-                </h3>
-                <p>Research Assistant</p>
-                <p>Oct 2023 - Jun 2024</p>
-              </div>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-content">
-                <h3>
-                  <a href="https://www.dadavidson.com/" target="_blank" rel="noopener noreferrer" className="company-link">
-                    D.A. Davidson & Co.
-                  </a>
-                </h3>
-                <p>Summer Analyst</p>
-                <p>Jun 2023 - Aug 2023</p>
+                <p>Undergraduate Researcher | March 2024 - December 2024</p>
+                <p>Worked under Prof. Subhasish Mitra and Samsung on next-generation augmented reality (AR) accelerators after
+                  selection to the 2024 EE REU Program.
+                </p>
               </div>
             </div>
           </div>
@@ -94,58 +75,12 @@ export default function Home() {
         <section style={{ marginBottom: "2rem" }}>
           <h2>Projects</h2>
           <Project
-            title="Fine-tuning CodeLlama-7B for Fortran Code Generation using PEFT"
-            description="Received Outstanding Custom Project Award from Prof. Tatsunori Hashimoto and Prof. Diyi Yang in Stanford's CS 224N (Natural Language Processing)."
+            title="Rasterization Accelerator"
+            description="Awarded top bracket performance (perfect score) in Stanford Fall 2024 EE 271 Optimization Contest."
             link="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/final-projects/AndrewCShiSohamGovandeTaeukKang.pdf"
           />
-          <Project
-            title="2024 AI Index Report"
-            description="The Stanford HAI AI Index report tracks, collates, distills, and visualizes data related to artificial intelligence (AI)."
-            link="https://aiindex.stanford.edu/wp-content/uploads/2024/05/HAI_AI-Index-Report-2024.pdf"
-          />
-          <Project
-            title="Oculife"
-            description="An immersive and interactive first aid medical response XR application for Apple Vision Pro."
-            link="https://devpost.com/software/oculife"
-          />
-        </section>
-        <section style={{ marginBottom: "2rem" }}>
-          <h2>Piano Performance</h2>
-          <p>I am a four-time National YoungArts winner, three-time California State First-Prize winner, and was admitted to the Julliard School in 2022.</p>
-          <a
-            href="/piano"
-            className="arrow-link"
-            style={{ fontWeight: "bold" }}
-          >
-            Accolades and Performances
-            <FontAwesomeIcon icon={faArrowRightLong} style={{ marginLeft: "0.5rem" }} />
-          </a>
-        </section>
-        <section>
-          <h2>Contact</h2>
-          <p>
-            <a href="mailto:acshi@stanford.edu" target="_blank" rel="noopener noreferrer" className="contact-link">
-              acshi [at] stanford [dot] edu
-            </a>
-          </p>
         </section>
       </main>
-      <footer className="footer">
-        <div className="footer-content">
-          <p>&copy; {new Date().getFullYear()} Andrew Shi. All rights reserved.</p>
-          <div className="footer-social-icons">
-            <a href="https://www.linkedin.com/in/acshi" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "1.5rem" }}/>
-            </a>
-            <a href="https://github.com/andrewcshi" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.5rem" }}/>
-            </a>
-            <a href="mailto:acshi@stanford.edu" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: "1.5rem" }}/>
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
