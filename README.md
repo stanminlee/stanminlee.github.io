@@ -1,3 +1,3 @@
 Personal Website
 
-Inspiration from andrewcshi
+Inspiration/Forked from andrewcshi
