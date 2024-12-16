@@ -38,12 +38,26 @@ export default function Home() {
       <main className="main">
         <section style={{ marginBottom: "2rem" }}>
           <p>
-          Hey, I'm Stan. I'm an undergraduate at Stanford studying Electrical Engineering, and
-          I'm interested in integrated circuits and electronic design automation.
+          Hey, I'm Stan, an undergraduate at Stanford studying Electrical Engineering. I'm interested in integrated circuits and electronic
+          design automation.
           </p>
         </section>
         <section>
+        <h2>Experience</h2>
         <div className="timeline">
+          <div className="timeline-item">
+            <div className="timeline-content">
+                <h3>
+                  <a target="_blank" rel="noopener noreferrer" className="company-link">
+                    Apple
+                  </a>
+                </h3>
+                <p>Incoming CAD Intern</p>
+                <p>
+                  Joining a Physical Design CAD team at Apple Silicon Engineering Group in Summer 2025!
+                </p>
+              </div>
+            </div>
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>
@@ -79,9 +93,35 @@ export default function Home() {
           <h2>Projects</h2>
           <Project
             title="Rasterization Accelerator"
-            description="Awarded top bracket performance (perfect score) in Stanford Fall 2024 EE 271 Optimization Contest."
+            description="Utilized C, SystemVerilog, Siemens Catapult HLS, and Synopsys Design Compiler to implement, verify, and optimize a
+            rasterization accelerator unit. Awarded top bracket performance (perfect score) in Stanford Fall 2024 EE 271 Optimization Contest."
             link=""
           />
+          <Project
+            title="FPGA Music Synthesizer"
+            description="Utilized Verilog and Vivado to design a programmable music synthesizer. Presented to EE 108 (Digital System Design)
+            teaching staff and Apple engineers."
+            link=""
+          />
+        </section>
+        <section style={{ marginBottom: "2rem" }}>
+          <h2>Relevant Coursework</h2>
+          <p>CME 100 - Vector Calculus for Engineers</p>
+          <p>CME 102 - Ordinary Differential Equations for Engineers</p>
+          <p>CS 103 - Mathematical Foundations of Computing</p>
+          <p>CS 106A - Programming Methodology</p>
+          <p>CS 106B  - Programming Abstractions</p>
+          <p>CS 107 - Computer Organization and Systems</p>
+          <p>CS 109 - Introduction to Probability for Computer Scientists</p>
+          <p>CS 111 - Operating Systems Principles</p>
+          <p>CS 161 - Design and Analysis of Algorithms</p>
+          <p>EE 64 - Mechanical Prototyping for Electrical Engineers</p>
+          <p>EE 101A - Circuits I</p>
+          <p>EE 108 - Digital System Design</p>
+          <p>EE 180 - Digital Systems Architecture</p>
+          <p>EE 271 - Introduction to VLSI Systems</p>
+          <p>EE 272 - Design Projects in VLSI Systems I</p>
+          <p>EE 292A - Electronic Design Automation (EDA) and Machine Learning Hardware</p>
         </section>
       </main>
     </div>
