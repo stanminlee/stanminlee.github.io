@@ -65,6 +65,19 @@ export default function Home() {
                     Silimate (YC S23)
                   </a>
                 </h3>
+                <p>Incoming Software Intern</p>
+                <p>
+                  Recieved a return offer, grateful to be returning to the team!
+                </p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h3>
+                  <a href="https://www.silimate.com/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    Silimate (YC S23)
+                  </a>
+                </h3>
                 <p>Software Intern | Oct 2024 - Dec 2024</p>
                 <p>
                   Developed a nightly-run testing platform using Pytest, AWS, and GitHub Actions
