@@ -43,36 +43,44 @@ export default function Home() {
           </p>
         </section>
         <section>
-          <h2>Experience</h2>
-            <h3>
-              <a href="https://www.silimate.com/" target="_blank" rel="noopener noreferrer" className="company-link">
-                Silimate (YC S23)
-              </a>
-            </h3>
-            <p>Software Intern (Part-time) | October 2024 - December 2024</p>
-            <p>Developed a nightly-run testing platform using Pytest, AWS, and GitHub Actions to ensure robust operation of shipped software tools,
-              and benchmarked software Design Space Exploration (DSE) capabilities.</p>
-
-            <br>
-            </br>
-            <h3>
-              <a href="https://rsg.stanford.edu/" target="_blank" rel="noopener noreferrer" className="company-link">
-                Robust Systems Group
-              </a>
-            </h3>
-            <p>Undergraduate Researcher | March 2024 - December 2024</p>
-            <p>Worked under Prof. Subhasish Mitra and Samsung on next-generation augmented reality (AR) accelerators after
-              selection to the 2024 EE REU Program.
-            </p>
+        <div className="timeline">
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h3>
+                  <a href="https://www.silimate.com/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    Silimate (YC S23)
+                  </a>
+                </h3>
+                <p>Software Intern | Oct 2024 - Dec 2024</p>
+                <p>
+                  Developed a nightly-run testing platform using Pytest, AWS, and GitHub Actions
+                  to ensure robust operation of shipped software tools, and benchmarked software Design
+                  Space Exploration (DSE) capabilities.
+                </p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h3>
+                  <a href="https://rsg.stanford.edu/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    Robust Systems Group (Stanford EE Department)
+                  </a>
+                </h3>
+                <p>Undergraduate Researcher | Mar 2024 - Dec 2024</p>
+                <p>
+                  Worked under Prof. Subhasish Mitra and Samsung on next-generation augmented reality (AR)
+                  accelerators after selection to the 2024 EE REU Program.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
-        <br>
-            </br>
         <section style={{ marginBottom: "2rem" }}>
           <h2>Projects</h2>
           <Project
             title="Rasterization Accelerator"
-            description="Awarded top brccket performance (perfect score) in Stanford Fall 2024 EE 271 Optimization Contest."
-            link="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/final-projects/AndrewCShiSohamGovandeTaeukKang.pdf"
+            description="Awarded top bracket performance (perfect score) in Stanford Fall 2024 EE 271 Optimization Contest."
+            link=""
           />
         </section>
       </main>
