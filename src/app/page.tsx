@@ -52,7 +52,7 @@ export default function Home() {
                     Apple
                   </a>
                 </h3>
-                <p>Incoming CAD Intern</p>
+                <p>Incoming CAD Intern, Top Level Physical Design</p>
                 <p>
                   Joining a Physical Design CAD team at Apple Silicon Engineering Group in Summer 2025!
                 </p>
@@ -65,9 +65,9 @@ export default function Home() {
                     Silimate (YC S23)
                   </a>
                 </h3>
-                <p>Incoming Software Intern</p>
+                <p>Software Intern</p>
                 <p>
-                  Recieved a return offer, grateful to be returning to the team!
+                  Continuing my work.
                 </p>
               </div>
             </div>
