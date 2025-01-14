@@ -65,9 +65,9 @@ export default function Home() {
                     Silimate (YC S23)
                   </a>
                 </h3>
-                <p>Software Intern</p>
+                <p>Software Intern | Jan 2025 - Present</p>
                 <p>
-                  Continuing my work.
+                  Return offer to continue wotk on required projects.
                 </p>
               </div>
             </div>
