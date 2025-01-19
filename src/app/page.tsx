@@ -52,7 +52,7 @@ export default function Home() {
                     Silimate (YC S23)
                   </a>
                 </h3>
-                <p>Software Intern | Jan 2025 - Present</p>
+                <p>Software Intern | January 2025 - Present</p>
                 <p>
                   Return offer to continue wotk on required projects.
                 </p>
@@ -65,7 +65,7 @@ export default function Home() {
                     Silimate (YC S23)
                   </a>
                 </h3>
-                <p>Software Intern | Oct 2024 - Dec 2024</p>
+                <p>Software Intern | October 2024 - December 2024</p>
                 <p>
                   Developed a nightly-run testing platform using Pytest, AWS, and GitHub Actions
                   to ensure robust operation of shipped software tools, and benchmarked software Design
@@ -80,7 +80,7 @@ export default function Home() {
                     Robust Systems Group (Stanford EE Department)
                   </a>
                 </h3>
-                <p>Undergraduate Researcher | Mar 2024 - Dec 2024</p>
+                <p>Undergraduate Researcher | March 2024 - November 2024</p>
                 <p>
                   Worked under Prof. Subhasish Mitra and Samsung on next-generation augmented reality (AR)
                   accelerators after selection to the 2024 EE REU Program.
