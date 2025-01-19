@@ -45,19 +45,6 @@ export default function Home() {
         <section>
         <h2>Experience</h2>
         <div className="timeline">
-          <div className="timeline-item">
-            <div className="timeline-content">
-                <h3>
-                  <a target="_blank" rel="noopener noreferrer" className="company-link">
-                    Apple
-                  </a>
-                </h3>
-                <p>Incoming CAD Intern, Top Level Physical Design</p>
-                <p>
-                  Joining a Physical Design CAD team at Apple Silicon Engineering Group in Summer 2025!
-                </p>
-              </div>
-            </div>
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>
@@ -107,13 +94,13 @@ export default function Home() {
           <Project
             title="Rasterization Accelerator"
             description="Utilized C, SystemVerilog, Siemens Catapult HLS, and Synopsys Design Compiler to implement, verify, and optimize a
-            rasterization accelerator unit. Awarded top bracket performance (perfect score) in Stanford Fall 2024 EE 271 Optimization Contest."
+            rasterization accelerator unit. Awarded top bracket performance in Stanford Fall 2024 EE 271 Optimization Project."
             link=""
           />
           <Project
             title="FPGA Music Synthesizer"
-            description="Utilized Verilog and Vivado to design a programmable music synthesizer. Presented to EE 108 (Digital System Design)
-            teaching staff and Apple engineers."
+            description="Utilized Verilog and Vivado to design a programmable music synthesizer with capabilities to play 3-note chords and display
+            notes and respective sine waves."
             link=""
           />
         </section>
