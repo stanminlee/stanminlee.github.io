@@ -54,7 +54,7 @@ export default function Home() {
                 </h3>
                 <p>Software Intern | January 2025 - Present</p>
                 <p>
-                  Return offer to continue wotk on required projects.
+                  Return offer to continue work on required projects.
                 </p>
               </div>
             </div>
