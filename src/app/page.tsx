@@ -20,7 +20,9 @@ export default function Home() {
           </div>
           <div className="profile-info" style={{ marginLeft: "4rem" }}>
             <h1>Stan Lee</h1>
-            <p>B.S. Candidate, Electrical Engineering | Stanford</p>
+            <p>Stanford University</p>
+            <p>M.S. Candidate, Electrical Engineering</p>
+            <p>B.S. Candidate, Electrical Engineering</p>
             <div className="social-icons">
               <a href="https://www.linkedin.com/in/stanminlee/" target="_blank" rel="noopener noreferrer" style={{ marginRight: "1rem" }}>
                 <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "1.5rem" }}/>
@@ -38,7 +40,7 @@ export default function Home() {
       <main className="main">
         <section style={{ marginBottom: "2rem" }}>
           <p>
-          Hey, I'm Stan, an undergraduate at Stanford studying Electrical Engineering. I'm interested in integrated circuits and electronic
+          I'm Stan, an undergraduate at Stanford studying Electrical Engineering. I'm interested in integrated circuits and electronic
           design automation.
           </p>
         </section>
@@ -48,13 +50,13 @@ export default function Home() {
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>
-                  <a href="https://www.silimate.com/" target="_blank" rel="noopener noreferrer" className="company-link">
-                    Silimate (YC S23)
+                  <a href="https://www.apple.com/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    Apple Inc.
                   </a>
                 </h3>
-                <p>Software Intern | January 2025 - Present</p>
+                <p>CAD Intern, Top-level Physical Design Team | June 2025 - Present</p>
                 <p>
-                  Return offer to continue work on required projects.
+                  Working on a CAD team at Apple Silicon Engineering Group.
                 </p>
               </div>
             </div>
@@ -65,11 +67,9 @@ export default function Home() {
                     Silimate (YC S23)
                   </a>
                 </h3>
-                <p>Software Intern | October 2024 - December 2024</p>
+                <p>Software Intern | October 2024 - May 2025</p>
                 <p>
-                  Developed a nightly-run testing platform using Pytest, AWS, and GitHub Actions
-                  to ensure robust operation of shipped software tools, and benchmarked software Design
-                  Space Exploration (DSE) capabilities.
+                  Worked directly under the CTO to assist in critical infrastructure and customer-facing features.
                 </p>
               </div>
             </div>
@@ -80,10 +80,9 @@ export default function Home() {
                     Robust Systems Group (Stanford EE Department)
                   </a>
                 </h3>
-                <p>Undergraduate Researcher | March 2024 - November 2024</p>
+                <p>Research Intern | June 2024 - August 2024</p>
                 <p>
-                  Worked under Prof. Subhasish Mitra and Samsung on next-generation augmented reality (AR)
-                  accelerators after selection to the 2024 EE REU Program.
+                  Worked on next-generation augmented reality (AR) accelerators after selection to the 2024 EE REU Program.
                 </p>
               </div>
             </div>
@@ -114,6 +113,7 @@ export default function Home() {
           <p>CS 107 - Computer Organization and Systems</p>
           <p>CS 109 - Introduction to Probability for Computer Scientists</p>
           <p>CS 111 - Operating Systems Principles</p>
+          <p>CS 143 - Compilers</p>
           <p>CS 161 - Design and Analysis of Algorithms</p>
           <p>EE 64 - Mechanical Prototyping for Electrical Engineers</p>
           <p>EE 65 - Modern Physics for Engineers</p>
