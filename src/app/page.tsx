@@ -89,19 +89,11 @@ export default function Home() {
           </div>
         </section>
         <section style={{ marginBottom: "2rem" }}>
-          <h2>Projects</h2>
-          <Project
-            title="Rasterization Accelerator"
-            description="Utilized C, SystemVerilog, Siemens Catapult HLS, and Synopsys Design Compiler to implement, verify, and optimize a
-            rasterization accelerator unit. Awarded top bracket performance in Stanford Fall 2024 EE 271 Optimization Project."
-            link=""
-          />
-          <Project
-            title="FPGA Music Synthesizer"
-            description="Utilized Verilog and Vivado to design a programmable music synthesizer with capabilities to play 3-note chords and display
-            notes and respective sine waves."
-            link=""
-          />
+
+
+
+
+
         </section>
         <section style={{ marginBottom: "2rem" }}>
           <h2>Relevant Coursework</h2>
