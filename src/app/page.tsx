@@ -40,8 +40,8 @@ export default function Home() {
       <main className="main">
         <section style={{ marginBottom: "2rem" }}>
           <p>
-          I'm Stan, an undergraduate at Stanford studying Electrical Engineering. I'm interested in integrated circuits and electronic
-          design automation.
+          I'm Stan, an undergraduate/graduate student at Stanford studying Electrical Engineering. My main interest is in 
+          electronic design automation, but I've also dabbled in areas across the compute and hardware stack.
           </p>
         </section>
         <section>
@@ -54,9 +54,9 @@ export default function Home() {
                     Apple Inc.
                   </a>
                 </h3>
-                <p>CAD Intern, Top-level Physical Design Team | June 2025 - Present</p>
+                <p>CAD Intern | June 2025 - Present</p>
                 <p>
-                  Working on a CAD team at Apple Silicon Engineering Group.
+                  Physical Design flow optimizations.
                 </p>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function Home() {
                 </h3>
                 <p>Software Intern | October 2024 - May 2025</p>
                 <p>
-                  Worked directly under the CTO to assist in critical infrastructure and customer-facing features.
+                  Worked directly under the CTO to assist in critical infrastructure projects and customer-requested features.
                 </p>
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function Home() {
               <div className="timeline-content">
                 <h3>
                   <a href="https://rsg.stanford.edu/" target="_blank" rel="noopener noreferrer" className="company-link">
-                    Robust Systems Group (Stanford EE Department)
+                    Robust Systems Group (Stanford Department of Electrical Engineering)
                   </a>
                 </h3>
                 <p>Research Intern | June 2024 - August 2024</p>
