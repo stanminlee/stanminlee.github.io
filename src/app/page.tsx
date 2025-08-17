@@ -40,8 +40,14 @@ export default function Home() {
       <main className="main">
         <section style={{ marginBottom: "2rem" }}>
           <p>
-          I'm Stan, an undergraduate/graduate student at Stanford studying Electrical Engineering. My main interest is in 
-          electronic design automation, but I've also dabbled in areas across the compute and hardware stack.
+          I'm Stan, an undergraduate/graduate student at Stanford studying Electrical Engineering. I believe that giving designers better EDA tools will give
+          them the ability to explore more complex designs with less effort; therefore, giving rise to more performant, power efficient, and
+          cost effective silicon. I take great pride in my work, and I'm always looking to solve the industry's toughest problems.
+          </p>
+          <p>
+          I never wrote a single line of code until I took intro CS in college and knew nothing about hardware.
+          I attribute a lot of my 'success' to sheer luck and help from amazing peers/mentors, but also to my work ethic
+          and willingness to learn where there are gaps in my knowledge. If this sounds like you, please feel free to reach out!
           </p>
         </section>
         <section>
@@ -54,9 +60,9 @@ export default function Home() {
                     Apple Inc.
                   </a>
                 </h3>
-                <p>CAD Intern | June 2025 - Present</p>
+                <p>CAD Intern, Top-level Physical Design | June 2025 - Present</p>
                 <p>
-                  Physical Design flow optimizations.
+                  Performing analysis for potential flow improvements and developing tooling to assist design teams.
                 </p>
               </div>
             </div>
@@ -69,7 +75,7 @@ export default function Home() {
                 </h3>
                 <p>Software Intern | October 2024 - May 2025</p>
                 <p>
-                  Worked directly under the CTO to assist in critical infrastructure projects and customer-requested features.
+                  Worked directly under the CEO/CTO to assist in critical infrastructure projects and customer-requested features.
                 </p>
               </div>
             </div>
@@ -77,10 +83,10 @@ export default function Home() {
               <div className="timeline-content">
                 <h3>
                   <a href="https://rsg.stanford.edu/" target="_blank" rel="noopener noreferrer" className="company-link">
-                    Robust Systems Group (Stanford Department of Electrical Engineering)
+                    Stanford Department of Electrical Engineering
                   </a>
                 </h3>
-                <p>Research Intern | June 2024 - August 2024</p>
+                <p>Research Intern, Robust Systems Group | June 2024 - August 2024</p>
                 <p>
                   Worked on next-generation augmented reality (AR) accelerators after selection to the 2024 EE REU Program.
                 </p>
