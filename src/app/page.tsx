@@ -44,11 +44,6 @@ export default function Home() {
           them the ability to explore more complex designs with less effort; therefore, giving rise to more performant, power efficient, and
           cost effective silicon. I take great pride in my work, and I'm always looking to solve the industry's toughest problems.
           </p>
-          <p>
-          I never wrote a single line of code until I took intro CS in college and knew nothing about hardware.
-          I attribute a lot of my 'success' to sheer luck and help from amazing peers/mentors, but also to my work ethic
-          and willingness to learn where there are gaps in my knowledge. If this sounds like you, please feel free to reach out!
-          </p>
         </section>
         <section>
         <h2>Experience</h2>
