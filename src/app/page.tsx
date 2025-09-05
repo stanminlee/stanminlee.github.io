@@ -108,6 +108,7 @@ export default function Home() {
           <p>CS 111 - Operating Systems Principles</p>
           <p>CS 143 - Compilers</p>
           <p>CS 161 - Design and Analysis of Algorithms</p>
+          <p>CS 229 - Machine Learning</p>
           <p>EE 64 - Mechanical Prototyping for Electrical Engineers</p>
           <p>EE 65 - Modern Physics for Engineers</p>
           <p>EE 101A - Circuits I</p>
