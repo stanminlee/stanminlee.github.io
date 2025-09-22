@@ -55,9 +55,9 @@ export default function Home() {
                     Apple Inc.
                   </a>
                 </h3>
-                <p>CAD Intern, Top-level Physical Design | June 2025 - Present</p>
+                <p>CAD Intern, Top-level Physical Design | June 2025 - September 2025</p>
                 <p>
-                  Performing analysis for potential flow improvements and developing tooling to assist design teams.
+                  Performed analysis for potential flow improvements and developed tooling to assist design teams.
                 </p>
               </div>
             </div>
