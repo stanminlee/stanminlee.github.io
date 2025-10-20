@@ -51,6 +51,19 @@ export default function Home() {
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>
+                  <a href="https://www.silimate.com/" target="_blank" rel="noopener noreferrer" className="company-link">
+                    Silimate (YC S23)
+                  </a>
+                </h3>
+                <p>Founding Engineer | September 2025 - Present</p>
+                <p>
+                  Silimate is the copilot for chip designers.
+                </p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <h3>
                   <a href="https://www.apple.com/" target="_blank" rel="noopener noreferrer" className="company-link">
                     Apple Inc.
                   </a>
@@ -108,7 +121,6 @@ export default function Home() {
           <p>CS 111 - Operating Systems Principles</p>
           <p>CS 143 - Compilers</p>
           <p>CS 161 - Design and Analysis of Algorithms</p>
-          <p>CS 229 - Machine Learning</p>
           <p>EE 64 - Mechanical Prototyping for Electrical Engineers</p>
           <p>EE 65 - Modern Physics for Engineers</p>
           <p>EE 101A - Circuits I</p>
