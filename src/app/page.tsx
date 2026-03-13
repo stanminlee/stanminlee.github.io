@@ -8,13 +8,13 @@ const experience = [
     url: "https://www.silimate.com/",
     role: "Founding Engineer",
     dates: "Sep 2025 – Present",
-    description: "Silimate is the copilot for chip designers.",
+    description: "Silimate is the copilot for chip designers. My key responsibilities include owning/driving feature development and customer support, which include unicorn startups and Fortune 500s.",
   },
   {
     company: "Apple Inc.",
     url: "https://www.apple.com/",
     role: "CAD Intern, Top-level Physical Design",
-    dates: "Jun – Sep 2025",
+    dates: "Jun 2025 – Sep 2025",
     description:
       "Performed analysis for potential flow improvements and developed tooling to assist design teams.",
   },
@@ -24,13 +24,13 @@ const experience = [
     role: "Software Intern",
     dates: "Oct 2024 – May 2025",
     description:
-      "Worked directly under the CEO/CTO to assist in critical infrastructure projects and customer-requested features.",
+      "Worked directly under the CEO/CTO to assist in critical infrastructure projects and customer-requested features. This included architecting the testing suite for our first product and full-stack development of key features.",
   },
   {
-    company: "Stanford EE Department",
+    company: "Stanford Departmentm of Electrical Engineering",
     url: "https://rsg.stanford.edu/",
     role: "Research Intern, Robust Systems Group",
-    dates: "Jun – Aug 2024",
+    dates: "Jun 2024 – Aug 2024",
     description:
       "Worked on next-generation augmented reality (AR) accelerators after selection to the 2024 EE REU Program.",
   },
@@ -74,6 +74,7 @@ export default function Home() {
           <p>
             I&apos;m Stan, an undergraduate/graduate student at Stanford
             studying Electrical Engineering.
+            I&apos;m currently a Founding Engineer at Silimate (YC S23).
           </p>
         </section>
 
