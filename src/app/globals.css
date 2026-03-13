@@ -3,273 +3,164 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --primary: #1a1a1a;
-  --secondary: #f2f2f2;
+  --bg: #fafafa;
+  --fg: #0f0f0f;
+  --muted: #71717a;
+  --border: #e4e4e7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #1a1a1a;
-    --primary: #1a1a1a;
-    --secondary: #f2f2f2;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: center;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: var(--primary);
+  color: inherit;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .container {
-  max-width: 900px;
-  padding: 2rem;
-  text-align: left;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
 }
 
-.header, .footer {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+/* ── Header ── */
 
-.main {
-  margin-bottom: 4rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-geist-sans);
-  font-weight: 700; /* Adjust weight as needed */
-  margin-bottom: 0.5rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-family: var(--font-geist-sans);
-  font-weight: 700; /* Adjust weight as needed */
-}
-
-p {
-  font-family: var(--font-geist-sans);
-  font-weight: 400; /* Adjust weight as needed */
-  margin-bottom: 0.5rem;
-}
-
-.profile {
+.header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-.profile-image {
+.header-info h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.25rem;
+}
+
+.header-info .subtitle {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0 0 0.75rem;
+}
+
+.social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social a {
+  color: var(--muted);
+  font-size: 1.1rem;
+  transition: color 0.15s;
+}
+
+.social a:hover {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+/* ── Bio ── */
+
+.bio {
+  margin-bottom: 3rem;
+}
+
+.bio p {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--fg);
+  margin: 0;
+}
+
+/* ── Section headings ── */
+
+h2 {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+}
+
+/* ── Experience ── */
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.15rem;
+}
+
+.company {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
   flex-shrink: 0;
 }
 
-.profile-info {
-  flex-grow: 1;
-  margin-left: 1rem;
-  text-align: left;
+.role {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: 0 0 0.4rem;
 }
 
-.profile-info h1 {
+.desc {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--fg);
   margin: 0;
 }
 
-.profile-info p {
-  margin: 0;
-}
+/* ── Responsive ── */
 
-.social-icons {
-  margin-top: 0.5rem;
-}
+@media (max-width: 520px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 
-.social-icons a {
-  color: var(--primary);
-  font-size: 1rem; /* Adjust the size to make it visible */
-  display: inline-block; /* Ensure the icons are inline */
-  margin-right: 0.5rem; /* Add some space between the icons */
-}
-
-.social-icons a:hover {
-  color: var(--secondary);
-  transition: color 0.3s ease;
-}
-
-.timeline {
-  position: relative;
-  margin: 2rem 0;
-  padding: 0;
-  list-style: none;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: var(--primary);
-  left: 20px;
-  margin-left: -2px;
-  border-radius: 2px;
-}
-
-.timeline-item {
-  position: relative;
-  margin: 0 0 2rem 40px;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--primary);
-  top: 0;
-  left: -26px; /* Adjust left position to align with the line */
-  border: 2px solid var(--background);
-}
-
-.timeline-content {
-  padding: 0.5rem 0;
-  margin-left: 20px; /* Ensure content is aligned with the dot */
-}
-
-.project-item {
-  margin-bottom: 1.5rem;
-}
-
-.project-item h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.project-item p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-title {
-  color: inherit; /* Inherit color from parent */
-  text-decoration: none; /* Remove underline */
-}
-
-.project-title:hover {
-  color: var(--primary); /* Optional: Change color on hover */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.project-title:active {
-  color: var(--secondary); /* Change color slightly on click */
-}
-
-.footer {
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-social-icons {
-  margin-top: 0.5rem;
-}
-
-.footer-social-icons a {
-  margin: 0 0.5rem;
-}
-
-.footer-social-icons a:hover {
-  color: var(--secondary);
-  transition: color 0.3s ease;
-}
-
-.arrow-link {
-  color: inherit; /* Inherit color from parent */
-  text-decoration: none; /* Remove underline */
-}
-
-.arrow-link:hover {
-  color: var(--primary); /* Optional: Change color on hover */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.back-arrow {
-  color: inherit; /* Inherit color from parent */
-  text-decoration: none; /* Remove underline */
-}
-
-.back-arrow:hover {
-  color: var(--primary); /* Optional: Change color on hover */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.performance-link {
-  color: inherit; /* Inherit color from parent */
-  text-decoration: none; /* Remove underline */
-}
-
-.performance-link:hover {
-  color: var(--primary); /* Optional: Change color on hover */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.company-link {
-  color: inherit; /* Inherit color from parent */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease;
-}
-
-.company-link:hover {
-  color: var(--primary); /* Optional: Change color on hover */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-link {
-  color: inherit; /* Inherit color from parent */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-  color: var(--primary); /* Optional: Change color on hover */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.text-base {
-  font-family: var(--font-geist-sans);
-  font-weight: 400; /* Adjust weight as needed */
-  font-size: 1rem; /* Base font size */
+  .experience-header {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
 }

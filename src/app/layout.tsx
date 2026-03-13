@@ -20,7 +20,6 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Stan Lee",
-  description: "Website",
 };
 
 export default function RootLayout({
