@@ -8,7 +8,7 @@ const experience = [
     url: "https://www.silimate.com/",
     role: "Founding Engineer",
     dates: "Sep 2025 – Present",
-    description: "Silimate is the copilot for chip designers. My key responsibilities include owning/driving feature development and customer support, which include unicorn startups and Fortune 500s.",
+    description: "Silimate is the copilot for chip designers. My key responsibilities include owning/driving core feature development and customer support, which include unicorn startups and Fortune 500s.",
   },
   {
     company: "Apple Inc.",
@@ -24,7 +24,7 @@ const experience = [
     role: "Software Intern",
     dates: "Oct 2024 – May 2025",
     description:
-      "Worked directly under the CEO/CTO to assist in critical infrastructure projects and customer-requested features. This included architecting the testing suite for our first product and full-stack development of key features.",
+      "Architected the full testing suite for the first company product and developed multiple key full-stack features, which drove significant user growth and revenue with large companies.",
   },
   {
     company: "Stanford Departmentm of Electrical Engineering",
@@ -32,7 +32,7 @@ const experience = [
     role: "Research Intern, Robust Systems Group",
     dates: "Jun 2024 – Aug 2024",
     description:
-      "Worked on next-generation augmented reality (AR) accelerators after selection to the 2024 EE REU Program.",
+      "Presented research on next-generation augmented reality accelerators after selection to the 2024 EE REU Program.",
   },
 ];
 
@@ -72,12 +72,12 @@ export default function Home() {
       <main>
         <section className="bio">
           <p>
-            I&apos;m Stan, an undergraduate/graduate student at Stanford
-            studying Electrical Engineering.
-            I&apos;m currently a Founding Engineer at Silimate (YC S23).
+            I&apos;m a student at Stanford studying Electrical Engineering and interested
+            in building powerful software tools. I was previously working in the Silicon Engineering Group at Apple
+            doing Physical Design CAD. Currently, I&apos;m a Founding Engineer at Silimate (YC S23) building
+            the future of chip design.
           </p>
         </section>
-
         <section>
           <h2>Experience</h2>
           <div className="experience-list">
