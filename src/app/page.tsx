@@ -46,6 +46,7 @@ const projects = [
     title: "Preqorsor",
     description: "Preqorsor is a fast RTL-level synthesis PPA prediction tool.",
     dates: "Oct 2024 – Present",
+    link: undefined,
   },
 ];
 
