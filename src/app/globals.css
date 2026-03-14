@@ -7,6 +7,7 @@
   --fg: #0f0f0f;
   --muted: #71717a;
   --border: #e4e4e7;
+  --accent: #7877c6;
 }
 
 * {
@@ -32,7 +33,19 @@ a:hover {
   text-underline-offset: 3px;
 }
 
+/* ── Cursor glow ── */
+
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  transition: background 0.1s ease;
+}
+
 .container {
+  position: relative;
+  z-index: 1;
   max-width: 680px;
   margin: 0 auto;
   padding: 4rem 2rem 6rem;
@@ -52,6 +65,20 @@ a:hover {
   font-weight: 700;
   letter-spacing: -0.02em;
   margin: 0 0 0.25rem;
+  min-height: 1.8rem;
+}
+
+/* Typewriter cursor */
+.cursor-blink {
+  display: inline-block;
+  margin-left: 1px;
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
 .header-info .subtitle {
@@ -111,6 +138,11 @@ h2 {
 .experience-item {
   padding: 1.25rem 0;
   border-bottom: 1px solid var(--border);
+  cursor: default;
+}
+
+.experience-item:hover {
+  background: none;
 }
 
 .experience-item:first-child {
@@ -125,9 +157,21 @@ h2 {
   margin-bottom: 0.15rem;
 }
 
+.experience-title-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
 .company {
   font-weight: 600;
   font-size: 0.9375rem;
+  transition: color 0.2s ease;
+}
+
+.experience-item:hover .company {
+  color: var(--fg);
+  text-decoration: none;
 }
 
 .date {
@@ -141,6 +185,11 @@ h2 {
   font-size: 0.875rem;
   color: var(--muted);
   margin: 0 0 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.experience-item:hover .role {
+  color: var(--fg);
 }
 
 .desc {
@@ -148,6 +197,53 @@ h2 {
   line-height: 1.65;
   color: var(--fg);
   margin: 0;
+}
+
+/* ── Projects ── */
+
+.projects-section {
+  margin-top: 3rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-item {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: color 0.2s ease;
+}
+
+.project-item:hover .project-title {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.project-item p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--fg);
+  margin: 0.25rem 0 0;
 }
 
 /* ── Responsive ── */
