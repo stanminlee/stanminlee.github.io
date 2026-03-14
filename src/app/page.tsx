@@ -37,7 +37,7 @@ const experience = [
     role: "Research Intern, Robust Systems Group",
     dates: "Jun 2024 – Aug 2024",
     description:
-      "Presented research on next-generation augmented reality accelerators after selection to the 2024 EE REU Program.",
+      "Presented research on next-generation augmented reality accelerators.",
   },
 ];
 
