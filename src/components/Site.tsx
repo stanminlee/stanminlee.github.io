@@ -52,6 +52,12 @@ const projects = [
     dates: "Oct 2024 – Present",
     link: undefined as string | undefined,
   },
+  {
+    title: "SurVose",
+    description: "SurVose is a voice agent that can improve your surveys and collect data autonomously, targeted for local governments with limited resources.",
+    dates: "Jan 2026 - Mar 2026",
+    link: undefined as string | undefined,
+  },
 ];
 
 const posts = [
