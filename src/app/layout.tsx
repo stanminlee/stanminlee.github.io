@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import SiteLayout from "@/components/SiteLayout";
 config.autoAddCss = false;
 
 const geistSans = localFont({
@@ -29,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <SiteLayout>{children}</SiteLayout>
+        {children}
       </body>
     </html>
   );

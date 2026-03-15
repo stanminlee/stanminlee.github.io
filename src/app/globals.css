@@ -12,6 +12,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -21,6 +23,7 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  overflow-y: scroll;
 }
 
 a {
@@ -102,6 +105,70 @@ a:hover {
 .social a:hover {
   color: var(--fg);
   text-decoration: none;
+}
+
+/* ── Initial load stagger ── */
+
+.stagger-1,
+.stagger-2,
+.stagger-3,
+.stagger-4,
+.stagger-5,
+.stagger-6,
+.stagger-7 {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.loaded .stagger-1 { opacity: 1; transform: none; transition-delay: 0ms; }
+.loaded .stagger-2 { opacity: 1; transform: none; transition-delay: 60ms; }
+.loaded .stagger-3 { opacity: 1; transform: none; transition-delay: 120ms; }
+.loaded .stagger-4 { opacity: 1; transform: none; transition-delay: 180ms; }
+.loaded .stagger-5 { opacity: 1; transform: none; transition-delay: 260ms; }
+.loaded .stagger-6 { opacity: 1; transform: none; transition-delay: 340ms; }
+.loaded .stagger-7 { opacity: 1; transform: none; transition-delay: 420ms; }
+
+/* ── Company tooltip ── */
+
+.company-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.company-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.company-wrap:hover .company-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── View fade ── */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.view-fade {
+  animation: fadeIn 0.3s ease forwards;
 }
 
 /* ── Bio ── */
@@ -258,6 +325,11 @@ h2 {
   font-size: 0.8125rem;
   color: var(--muted);
   text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
   transition: color 0.15s;
 }
 
@@ -269,6 +341,10 @@ h2 {
 .nav-link.active {
   color: var(--fg);
   font-weight: 500;
+}
+
+.name-link {
+  cursor: pointer;
 }
 
 /* ── Blog row (experience-item variant) ── */
