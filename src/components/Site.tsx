@@ -9,7 +9,6 @@ import Project from "@/components/Project";
 const experience = [
   {
     company: "Silimate (YC S23)",
-    tooltip: "Full Time · Mountain View, CA",
     url: "https://www.silimate.com/",
     role: "Founding Engineer",
     dates: "Sep 2025 – Present",
@@ -18,7 +17,6 @@ const experience = [
   },
   {
     company: "Apple Inc.",
-    tooltip: "Full Time · Sunnyvale, CA",
     url: "https://www.apple.com/",
     role: "CAD Intern, Top-level Physical Design",
     dates: "Jun 2025 – Sep 2025",
@@ -27,7 +25,6 @@ const experience = [
   },
   {
     company: "Silimate (YC S23)",
-    tooltip: "Part Time · Mountain View, CA",
     url: "https://www.silimate.com/",
     role: "Software Intern",
     dates: "Oct 2024 – May 2025",
@@ -36,7 +33,6 @@ const experience = [
   },
   {
     company: "Stanford Department of Electrical Engineering",
-    tooltip: "Full Time · Stanford, CA",
     url: "https://rsg.stanford.edu/",
     role: "Research Intern, Robust Systems Group",
     dates: "Jun 2024 – Aug 2024",
@@ -170,15 +166,12 @@ export default function Site() {
                   {experience.map((item, i) => (
                     <div className="experience-item" key={i}>
                       <div className="experience-header">
-                        <div className="experience-title-row">
-                          <div className="company-wrap">
+                          <div className="experience-title-row">
                             <a href={item.url} target="_blank" rel="noopener noreferrer" className="company">
                               {item.company}
                             </a>
-                            <span className="company-tooltip">{item.tooltip}</span>
+                            <p className="role">{item.role}</p>
                           </div>
-                          <p className="role">{item.role}</p>
-                        </div>
                         <span className="date">{item.dates}</span>
                       </div>
                       <p className="desc">{item.description}</p>

@@ -129,37 +129,6 @@ a:hover {
 .loaded .stagger-6 { opacity: 1; transform: none; transition-delay: 340ms; }
 .loaded .stagger-7 { opacity: 1; transform: none; transition-delay: 420ms; }
 
-/* ── Company tooltip ── */
-
-.company-wrap {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-
-.company-tooltip {
-  position: absolute;
-  bottom: calc(100% + 6px);
-  left: 0;
-  background: var(--fg);
-  color: var(--bg);
-  font-size: 0.7rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  white-space: nowrap;
-  pointer-events: none;
-  opacity: 0;
-  transform: translateY(4px);
-  transition: opacity 0.15s ease, transform 0.15s ease;
-}
-
-.company-wrap:hover .company-tooltip {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* ── View fade ── */
 
 @keyframes fadeIn {
