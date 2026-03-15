@@ -69,6 +69,7 @@ export default function Site() {
   const [view, setView] = useState<View>("home");
   const [displayed, setDisplayed] = useState("");
   const [headerReady, setHeaderReady] = useState(false);
+  const [scrollPct, setScrollPct] = useState(0);
   const glowRef = useRef<HTMLDivElement>(null);
 
   const runTypewriter = () => {
@@ -100,12 +101,27 @@ export default function Site() {
     return () => window.removeEventListener("mousemove", move);
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => {
+      const el = document.documentElement;
+      const pct = el.scrollTop / (el.scrollHeight - el.clientHeight);
+      setScrollPct(isNaN(pct) ? 0 : pct * 100);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const currentPost =
     typeof view === "object" ? posts.find((p) => p.slug === view.slug) : null;
   const viewKey = typeof view === "object" ? view.slug : view;
 
   return (
     <>
+      <div
+        className="scroll-bar"
+        style={{ width: `${scrollPct}%` }}
+        aria-hidden
+      />
       <div ref={glowRef} className="cursor-glow" aria-hidden />
       <div className={`container${headerReady ? " loaded" : ""}`}>
         <header className="header">
@@ -147,89 +163,86 @@ export default function Site() {
             </button>
           </nav>
 
-          {/* ── Home ── */}
           <div key={viewKey} className="view-fade">
-          {view === "home" && (
-            <>
-              <section className="bio stagger-5">
-                <p>
-                  I&apos;m a student at Stanford studying Electrical Engineering and interested
-                  in building powerful software tools. I was previously working in the Silicon Engineering Group at Apple
-                  doing Physical Design CAD. Currently, I&apos;m a Founding Engineer at Silimate (YC S23) building
-                  the future of chip design.
-                </p>
-              </section>
+            {view === "home" && (
+              <>
+                <section className="bio stagger-5">
+                  <p>
+                    I&apos;m a student at Stanford studying Electrical Engineering and interested
+                    in building powerful software tools. I was previously working in the Silicon Engineering Group at Apple
+                    doing Physical Design CAD. Currently, I&apos;m a Founding Engineer at Silimate (YC S23) building
+                    the future of chip design.
+                  </p>
+                </section>
 
-              <section className="stagger-6">
-                <h2>Experience</h2>
-                <div className="experience-list">
-                  {experience.map((item, i) => (
-                    <div className="experience-item" key={i}>
-                      <div className="experience-header">
+                <section className="stagger-6">
+                  <h2>Experience</h2>
+                  <div className="experience-list">
+                    {experience.map((item, i) => (
+                      <div className="experience-item" key={i}>
+                        <div className="experience-header">
                           <div className="experience-title-row">
                             <a href={item.url} target="_blank" rel="noopener noreferrer" className="company">
                               {item.company}
                             </a>
                             <p className="role">{item.role}</p>
                           </div>
-                        <span className="date">{item.dates}</span>
+                          <span className="date">{item.dates}</span>
+                        </div>
+                        <p className="desc">{item.description}</p>
                       </div>
-                      <p className="desc">{item.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section className="projects-section stagger-7">
-                <h2>Projects</h2>
-                <div className="project-list">
-                  {projects.map((p, i) => (
-                    <Project key={i} title={p.title} description={p.description} link={p.link} dates={p.dates} />
-                  ))}
-                </div>
-              </section>
-            </>
-          )}
-
-          {/* ── Blog index ── */}
-          {view === "blog" && (
-            <section>
-              <h2>Blog</h2>
-              <div className="experience-list">
-                {posts.map((post) => (
-                  <div
-                    key={post.slug}
-                    className="experience-item blog-row"
-                    onClick={() => setView({ slug: post.slug })}
-                  >
-                    <div className="experience-header">
-                      <span className="company">{post.title}</span>
-                      <span className="date">{post.date}</span>
-                    </div>
-                    <p className="desc">{post.excerpt}</p>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </section>
-          )}
+                </section>
 
-          {/* ── Blog post ── */}
-          {currentPost && (
-            <article className="post">
-              <div className="post-header">
-                <h1 className="post-title">{currentPost.title}</h1>
-                <span className="date">{currentPost.date}</span>
-              </div>
-              <div className="post-body">
-                {currentPost.content.split("\n").map((line, i) => {
-                  if (line.startsWith("## ")) return <h2 key={i}>{line.slice(3)}</h2>;
-                  if (line.startsWith("# ")) return <h1 key={i}>{line.slice(2)}</h1>;
-                  if (line === "") return <br key={i} />;
-                  return <p key={i}>{line}</p>;
-                })}
-              </div>
-            </article>
-          )}
+                <section className="projects-section stagger-7">
+                  <h2>Projects</h2>
+                  <div className="project-list">
+                    {projects.map((p, i) => (
+                      <Project key={i} title={p.title} description={p.description} link={p.link} dates={p.dates} />
+                    ))}
+                  </div>
+                </section>
+              </>
+            )}
+
+            {view === "blog" && (
+              <section>
+                <h2>Blog</h2>
+                <div className="experience-list">
+                  {posts.map((post) => (
+                    <div
+                      key={post.slug}
+                      className="experience-item blog-row"
+                      onClick={() => setView({ slug: post.slug })}
+                    >
+                      <div className="experience-header">
+                        <span className="company">{post.title}</span>
+                        <span className="date">{post.date}</span>
+                      </div>
+                      <p className="desc">{post.excerpt}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {currentPost && (
+              <article className="post">
+                <div className="post-header">
+                  <h1 className="post-title">{currentPost.title}</h1>
+                  <span className="date">{currentPost.date}</span>
+                </div>
+                <div className="post-body">
+                  {currentPost.content.split("\n").map((line, i) => {
+                    if (line.startsWith("## ")) return <h2 key={i}>{line.slice(3)}</h2>;
+                    if (line.startsWith("# ")) return <h1 key={i}>{line.slice(2)}</h1>;
+                    if (line === "") return <br key={i} />;
+                    return <p key={i}>{line}</p>;
+                  })}
+                </div>
+              </article>
+            )}
           </div>
         </main>
       </div>

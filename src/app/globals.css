@@ -36,6 +36,19 @@ a:hover {
   text-underline-offset: 3px;
 }
 
+/* ── Scroll progress bar ── */
+
+.scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--fg);
+  z-index: 100;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
 /* ── Cursor glow ── */
 
 .cursor-glow {
