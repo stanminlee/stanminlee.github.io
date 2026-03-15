@@ -14,7 +14,7 @@ const experience = [
     role: "Founding Engineer",
     dates: "Sep 2025 – Present",
     description:
-      "Silimate is the copilot for chip designers. My key responsibilities include owning/driving core feature development and customer support, which include unicorn startups and Fortune 500s.",
+      "Engineer #1 at hiring time. My key responsibilities include owning/driving core feature development and customer support, which include unicorn startups and Fortune 500s.",
   },
   {
     company: "Apple Inc.",
@@ -32,7 +32,7 @@ const experience = [
     role: "Software Intern",
     dates: "Oct 2024 – May 2025",
     description:
-      "Architected the full testing suite for the first company product and developed multiple key full-stack features, which drove significant user growth and revenue with large companies.",
+      "First intern for the company. Architected the full testing suite for the first company product and developed multiple key full-stack features, which drove significant user growth and revenue with large companies.",
   },
   {
     company: "Stanford Department of Electrical Engineering",
