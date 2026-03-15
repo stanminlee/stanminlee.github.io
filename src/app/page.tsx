@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -116,6 +117,11 @@ export default function Home() {
         </header>
 
         <main>
+          <nav className="page-nav">
+            <span className="nav-link active">Home</span>
+            <Link href="/blog" className="nav-link">Blog</Link>
+          </nav>
+
           <section className="bio">
             <p>
               I&apos;m a student at Stanford studying Electrical Engineering and interested
