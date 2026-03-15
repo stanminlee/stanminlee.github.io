@@ -54,7 +54,7 @@ const projects = [
   },
   {
     title: "SurVose",
-    description: "SurVose is a voice agent that can improve your surveys and collect data autonomously, targeted for local governments with limited resources.",
+    description: "SurVose is a voice agent that can improve your surveys and collect data autonomously, targeted to local governments with limited resources.",
     dates: "Jan 2026 - Mar 2026",
     link: undefined as string | undefined,
   },
