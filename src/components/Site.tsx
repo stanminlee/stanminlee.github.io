@@ -75,7 +75,9 @@ export default function Site() {
   const [headerReady, setHeaderReady] = useState(false);
   const glowRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  const runTypewriter = () => {
+    setDisplayed("");
+    setHeaderReady(false);
     let i = 0;
     const interval = setInterval(() => {
       i++;
@@ -86,6 +88,10 @@ export default function Site() {
       }
     }, 80);
     return () => clearInterval(interval);
+  };
+
+  useEffect(() => {
+    return runTypewriter();
   }, []);
 
   useEffect(() => {
@@ -108,7 +114,7 @@ export default function Site() {
       <div className={`container${headerReady ? " loaded" : ""}`}>
         <header className="header">
           <div className="header-info">
-            <h1 className="name-link" onClick={() => setView("home")}>
+            <h1 className="name-link" onClick={() => { setView("home"); runTypewriter(); }}>
               {displayed}
               <span className="cursor-blink" aria-hidden>|</span>
             </h1>
