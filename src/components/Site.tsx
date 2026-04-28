@@ -23,7 +23,7 @@ const experience = [
     dates: "Jun 2025 – Sep 2025",
     skills: ["Python", "Tcl", "Physical Design", "Cadence Innovus"],
     description:
-      "Performed analysis for potential physical design flow improvements and developed tooling to assist design teams.",
+      "Developed analysis tool to identify areas for physical design flow improvements. Discovered inefficiencies in buffer placement/routing and developed supporting utilities for an algorithmic improvement. Delivered successful presentation to the senior director of CAD.",
   },
   {
     company: "Silimate (YC S23)",
@@ -61,15 +61,7 @@ const projects = [
 ];
 
 const posts = [
-  {
-    slug: "hello-world",
-    title: "Welcome to my website!",
-    date: "Mar 14, 2026",
-    excerpt: "Introduction to my blog posts",
-    content: `
-      I've decided to start blogging about my experiences and learnings in the semiconductor industry. More to come soon...
-    `.trim(),
-  },
+  {},
 ];
 
 const courses = [
@@ -258,8 +250,8 @@ export default function Site() {
                 <section className="bio stagger-5">
                   <p>
                     I&apos;m a student at Stanford studying Electrical Engineering and interested
-                    in building powerful software tools. I was previously working in the Silicon Engineering Group at Apple
-                    doing Physical Design CAD. Currently, I&apos;m a Founding Engineer at Silimate (YC S23) building
+                    in building powerful software tools. I've previously worked in the Silicon Engineering Group at Apple.
+                    Currently, I&apos;m a Founding Engineer at Silimate (YC S23) building
                     the future of chip design.
                   </p>
                   <div className="stats stagger-5">
