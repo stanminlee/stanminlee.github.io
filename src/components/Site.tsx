@@ -60,9 +60,15 @@ const projects = [
   },
 ];
 
-const posts = [
-  {},
-];
+type Post = {
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  content: string;
+};
+
+const posts: Post[] = [];
 
 const courses = [
   { code: "CS 143",  title: "Compilers" },
