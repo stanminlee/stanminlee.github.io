@@ -4,7 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import Project from "@/components/Project";
+import Contributions from "@/components/Contributions";
+import { useScramble, useCounter } from "@/lib/hooks";
 
 const experience = [
   {
@@ -45,109 +46,18 @@ const experience = [
   },
 ];
 
-const projects = [
-  {
-    title: "Preqorsor",
-    description: "Preqorsor is a fast RTL-level synthesis PPA prediction tool.",
-    dates: "Oct 2024 – Present",
-    link: undefined as string | undefined,
-  },
-  {
-    title: "SurVose",
-    description: "SurVose is a voice agent that can improve your surveys and collect data autonomously, targeted to local governments with limited resources.",
-    dates: "Jan 2026 - Mar 2026",
-    link: undefined as string | undefined,
-  },
-];
-
-type Post = {
-  slug: string;
-  title: string;
-  date: string;
-  excerpt: string;
-  content: string;
-};
-
-const posts: Post[] = [];
-
-const courses = [
-  { code: "CS 143",  title: "Compilers" },
-  { code: "CS 161",  title: "Design and Analysis of Algorithms" },
-  { code: "EE 108",  title: "Digital System Design" },
-  { code: "EE 180",  title: "Digital Systems Architecture" },
-  { code: "EE 271",  title: "Introduction to VLSI Systems" },
-  { code: "EE 272",  title: "Design Projects in VLSI Systems I" },
-  { code: "EE 292A", title: "Electronic Design Automation (EDA) and Machine Learning Hardware" },
-];
-
-const SCRAMBLE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-function useScramble(target: string, trigger: boolean, delay = 0) {
-  const [text, setText] = useState(target);
-  useEffect(() => {
-    if (!trigger) return;
-    let frame = 0;
-    const totalFrames = 10;
-    const timeout = setTimeout(() => {
-      const interval = setInterval(() => {
-        frame++;
-        if (frame >= totalFrames) {
-          setText(target);
-          clearInterval(interval);
-        } else {
-          setText(
-            target
-              .split("")
-              .map((ch, i) =>
-                i < Math.floor((frame / totalFrames) * target.length)
-                  ? ch
-                  : ch === " "
-                  ? " "
-                  : SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]
-              )
-              .join("")
-          );
-        }
-      }, 40);
-      return () => clearInterval(interval);
-    }, delay);
-    return () => clearTimeout(timeout);
-  }, [trigger, target, delay]);
-  return text;
-}
-
-function useCounter(target: number, trigger: boolean, delay = 0) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    if (!trigger) return;
-    const timeout = setTimeout(() => {
-      let current = 0;
-      const step = Math.ceil(target / 20);
-      const interval = setInterval(() => {
-        current = Math.min(current + step, target);
-        setCount(current);
-        if (current >= target) clearInterval(interval);
-      }, 40);
-      return () => clearInterval(interval);
-    }, delay);
-    return () => clearTimeout(timeout);
-  }, [trigger, target, delay]);
-  return count;
-}
-
 const FULL_NAME = "Stan Lee";
-type View = "home" | "blog" | "courses" | { slug: string };
+type View = "home" | "contributions";
 
 export default function Site() {
   const [view, setView] = useState<View>("home");
   const [displayed, setDisplayed] = useState("");
   const [headerReady, setHeaderReady] = useState(false);
   const [scrollPct, setScrollPct] = useState(0);
+  const [expandedExp, setExpandedExp] = useState<number | null>(null);
   const glowRef = useRef<HTMLDivElement>(null);
 
   const expLabel = useScramble("Experience", headerReady, 400);
-  const projLabel = useScramble("Projects", headerReady, 500);
-  const courseLabel = useScramble("Coursework", headerReady, 600);
 
   const countExp = useCounter(experience.length, headerReady, 700);
   const countCompanies = useCounter(
@@ -155,7 +65,6 @@ export default function Site() {
     headerReady,
     750
   );
-  const countProjects = useCounter(projects.length, headerReady, 800);
 
   const runTypewriter = () => {
     setDisplayed("");
@@ -196,10 +105,6 @@ export default function Site() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const currentPost =
-    typeof view === "object" ? posts.find((p) => p.slug === view.slug) : null;
-  const viewKey = typeof view === "object" ? view.slug : view;
-
   return (
     <>
       <div className="scroll-bar" style={{ width: `${scrollPct}%` }} aria-hidden />
@@ -212,7 +117,7 @@ export default function Site() {
               <span className="cursor-blink" aria-hidden>|</span>
             </h1>
             <p className="subtitle stagger-2">
-              Stanford University · M.S. & B.S. Candidate, Electrical Engineering
+              Founding Engineer, Silimate (YC S23)
             </p>
             <div className="social stagger-3">
               <a href="https://www.linkedin.com/in/stanminlee/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -237,35 +142,27 @@ export default function Site() {
               Home
             </button>
             <button
-              className={`nav-link${view === "blog" || typeof view === "object" ? " active" : ""}`}
-              onClick={() => setView("blog")}
+              className={`nav-link${view === "contributions" ? " active" : ""}`}
+              onClick={() => setView("contributions")}
             >
-              Blog
-            </button>
-            <button
-              className={`nav-link${view === "courses" ? " active" : ""}`}
-              onClick={() => setView("courses")}
-            >
-              Courses
+              Contributions
             </button>
           </nav>
 
-          <div key={viewKey} className="view-fade">
+          <div key={view} className="view-fade">
             {view === "home" && (
               <>
                 <section className="bio stagger-5">
                   <p>
                     I&apos;m a student at Stanford studying Electrical Engineering and interested
-                    in building powerful software tools. I've previously worked in the Silicon Engineering Group at Apple.
+                    in building powerful software tools. I&apos;ve previously worked in the Silicon Engineering Group at Apple.
                     Currently, I&apos;m a Founding Engineer at Silimate (YC S23) building
                     the future of chip design.
                   </p>
                   <div className="stats stagger-5">
-                    <span className="stat"><span className="stat-num">{countExp}</span> experiences</span>
+                    <span className="stat"><span className="stat-num">{Math.round(countExp)}</span> experiences</span>
                     <span className="stat-sep">·</span>
-                    <span className="stat"><span className="stat-num">{countCompanies}</span> companies</span>
-                    <span className="stat-sep">·</span>
-                    <span className="stat"><span className="stat-num">{countProjects}</span> projects</span>
+                    <span className="stat"><span className="stat-num">{Math.round(countCompanies)}</span> companies</span>
                   </div>
                 </section>
 
@@ -273,15 +170,28 @@ export default function Site() {
                   <h2>{expLabel}</h2>
                   <div className="experience-list">
                     {experience.map((item, i) => (
-                      <div className="experience-item" key={i}>
+                      <div
+                        className={`experience-item${expandedExp === i ? " expanded" : ""}`}
+                        key={i}
+                        onClick={() => setExpandedExp(expandedExp === i ? null : i)}
+                      >
                         <div className="experience-header">
                           <div className="experience-title-row">
-                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="company">
+                            <a
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="company"
+                              onClick={(e) => e.stopPropagation()}
+                            >
                               {item.company}
                             </a>
                             <p className="role">{item.role}</p>
                           </div>
-                          <span className="date">{item.dates}</span>
+                          <span className="date">
+                            {item.dates}
+                            <span className="experience-chevron" aria-hidden>›</span>
+                          </span>
                         </div>
                         <p className="desc">{item.description}</p>
                         <div className="skills">
@@ -293,69 +203,10 @@ export default function Site() {
                     ))}
                   </div>
                 </section>
-
-                <section className="projects-section stagger-7">
-                  <h2>{projLabel}</h2>
-                  <div className="project-list">
-                    {projects.map((p, i) => (
-                      <Project key={i} title={p.title} description={p.description} link={p.link} dates={p.dates} />
-                    ))}
-                  </div>
-                </section>
               </>
             )}
 
-            {view === "blog" && (
-              <section>
-                <h2>Blog</h2>
-                <div className="experience-list">
-                  {posts.map((post) => (
-                    <div
-                      key={post.slug}
-                      className="experience-item blog-row"
-                      onClick={() => setView({ slug: post.slug })}
-                    >
-                      <div className="experience-header">
-                        <span className="company">{post.title}</span>
-                        <span className="date">{post.date}</span>
-                      </div>
-                      <p className="desc">{post.excerpt}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {view === "courses" && (
-              <section>
-                <h2>{courseLabel}</h2>
-                <div className="course-list">
-                  {courses.map((c) => (
-                    <div className="course-item" key={c.code}>
-                      <span className="course-code">{c.code}</span>
-                      <span className="course-title">{c.title}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {currentPost && (
-              <article className="post">
-                <div className="post-header">
-                  <h1 className="post-title">{currentPost.title}</h1>
-                  <span className="date">{currentPost.date}</span>
-                </div>
-                <div className="post-body">
-                  {currentPost.content.split("\n").map((line, i) => {
-                    if (line.startsWith("## ")) return <h2 key={i}>{line.slice(3)}</h2>;
-                    if (line.startsWith("# ")) return <h1 key={i}>{line.slice(2)}</h1>;
-                    if (line === "") return <br key={i} />;
-                    return <p key={i}>{line}</p>;
-                  })}
-                </div>
-              </article>
-            )}
+            {view === "contributions" && <Contributions headerReady={headerReady} />}
           </div>
         </main>
       </div>
