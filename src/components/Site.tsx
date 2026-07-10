@@ -154,10 +154,9 @@ export default function Site() {
               <>
                 <section className="bio stagger-5">
                   <p>
-                    I&apos;m a student at Stanford studying Electrical Engineering and interested
-                    in building powerful software tools. I&apos;ve previously worked in the Silicon Engineering Group at Apple.
-                    Currently, I&apos;m a Founding Engineer at Silimate (YC S23) building
-                    the future of chip design.
+                    I recently graduated from Stanford University with a Bachelor of Science in Electrical Engineering.
+                    I&apos;ve previously worked in the Silicon Engineering Group at Apple.
+                    Currently, I&apos;m a Founding Engineer at Silimate (YC S23).
                   </p>
                   <div className="stats stagger-5">
                     <span className="stat"><span className="stat-num">{Math.round(countExp)}</span> experiences</span>
