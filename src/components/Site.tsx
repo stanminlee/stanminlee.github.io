@@ -3,8 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import Contributions from "@/components/Contributions";
 import { useScramble, useCounter } from "@/lib/hooks";
 
 const experience = [
@@ -13,51 +11,54 @@ const experience = [
     url: "https://www.silimate.com/",
     role: "Founding Engineer",
     dates: "Sep 2025 – Present",
-    skills: ["Python", "C++", "Synthesis Tools", "AI Agents", "Machine Learning"],
-    description:
-      "Engineer #1 at hiring time. My key responsibilities include owning/driving core feature development and customer support, which include unicorn startups and Fortune 500s.",
   },
   {
     company: "Apple Inc.",
     url: "https://www.apple.com/",
     role: "CAD Intern, Top-level Physical Design",
     dates: "Jun 2025 – Sep 2025",
-    skills: ["Python", "Tcl", "Physical Design", "Cadence Innovus"],
-    description:
-      "Developed analysis tool to identify areas for physical design flow improvements. Discovered inefficiencies in buffer placement/routing and developed supporting utilities for an algorithmic improvement. Delivered successful presentation to the senior director of CAD.",
   },
   {
     company: "Silimate (YC S23)",
     url: "https://www.silimate.com/",
     role: "Software Intern",
     dates: "Oct 2024 – May 2025",
-    skills: ["TypeScript", "Python", "Pytest"],
-    description:
-      "First intern for the company. Architected the full testing suite for the first company product and developed multiple key full-stack features, which drove significant user growth and revenue with large companies.",
   },
   {
     company: "Stanford Department of Electrical Engineering",
     url: "https://rsg.stanford.edu/",
     role: "Research Intern, Robust Systems Group",
     dates: "Jun 2024 – Aug 2024",
-    skills: ["Python"],
-    description:
-      "Presented research on next-generation augmented reality accelerators.",
+  },
+];
+
+const education = [
+  {
+    school: "Stanford University",
+    url: "https://ee.stanford.edu/",
+    degree: "M.S. Electrical Engineering",
+    concentration: "Software and Hardware Systems",
+    dates: "2025 – (On leave)",
+  },
+  {
+    school: "Stanford University",
+    url: "https://ee.stanford.edu/",
+    degree: "B.S. Electrical Engineering",
+    concentration: "Hardware and Software",
+    dates: "2022 – 2026",
   },
 ];
 
 const FULL_NAME = "Stan Lee";
-type View = "home" | "contributions";
 
 export default function Site() {
-  const [view, setView] = useState<View>("home");
   const [displayed, setDisplayed] = useState("");
   const [headerReady, setHeaderReady] = useState(false);
   const [scrollPct, setScrollPct] = useState(0);
-  const [expandedExp, setExpandedExp] = useState<number | null>(null);
   const glowRef = useRef<HTMLDivElement>(null);
 
   const expLabel = useScramble("Experience", headerReady, 400);
+  const eduLabel = useScramble("Education", headerReady, 500);
 
   const countExp = useCounter(experience.length, headerReady, 700);
   const countCompanies = useCounter(
@@ -89,7 +90,7 @@ export default function Site() {
     const el = glowRef.current;
     if (!el) return;
     const move = (e: MouseEvent) => {
-      el.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(120,119,198,0.07), transparent 70%)`;
+      el.style.background = `radial-gradient(500px at ${e.clientX}px ${e.clientY}px, rgba(120,119,198,0.1), transparent 70%)`;
     };
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
@@ -112,7 +113,7 @@ export default function Site() {
       <div className={`container${headerReady ? " loaded" : ""}`}>
         <header className="header">
           <div className="header-info">
-            <h1 className="name-link" onClick={() => { setView("home"); runTypewriter(); }}>
+            <h1 className="name-link" onClick={runTypewriter}>
               {displayed}
               <span className="cursor-blink" aria-hidden>|</span>
             </h1>
@@ -126,87 +127,72 @@ export default function Site() {
               <a href="https://github.com/stanminlee" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a href="mailto:slee93@stanford.edu" aria-label="Email">
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
             </div>
           </div>
         </header>
 
         <main>
-          <nav className="page-nav stagger-4">
-            <button
-              className={`nav-link${view === "home" ? " active" : ""}`}
-              onClick={() => setView("home")}
-            >
-              Home
-            </button>
-            <button
-              className={`nav-link${view === "contributions" ? " active" : ""}`}
-              onClick={() => setView("contributions")}
-            >
-              Contributions
-            </button>
-          </nav>
+          <section className="bio stagger-4">
+            <p>
+              I recently graduated from Stanford with a B.S. in Electrical Engineering.
+              My previous experience and education spans the chip design stack—from compilers to physical design.
+              I&apos;m currently a Founding Engineer at Silimate (YC S23).
+            </p>
+            <div className="stats stagger-5">
+              <span className="stat"><span className="stat-num">{Math.round(countExp)}</span> experiences</span>
+              <span className="stat-sep">·</span>
+              <span className="stat"><span className="stat-num">{Math.round(countCompanies)}</span> companies</span>
+            </div>
+          </section>
 
-          <div key={view} className="view-fade">
-            {view === "home" && (
-              <>
-                <section className="bio stagger-5">
-                  <p>
-                    I recently graduated from Stanford University with a Bachelor of Science in Electrical Engineering.
-                    I&apos;ve previously worked in the Silicon Engineering Group at Apple.
-                    Currently, I&apos;m a Founding Engineer at Silimate (YC S23).
-                  </p>
-                  <div className="stats stagger-5">
-                    <span className="stat"><span className="stat-num">{Math.round(countExp)}</span> experiences</span>
-                    <span className="stat-sep">·</span>
-                    <span className="stat"><span className="stat-num">{Math.round(countCompanies)}</span> companies</span>
-                  </div>
-                </section>
-
-                <section className="stagger-6">
-                  <h2>{expLabel}</h2>
-                  <div className="experience-list">
-                    {experience.map((item, i) => (
-                      <div
-                        className={`experience-item${expandedExp === i ? " expanded" : ""}`}
-                        key={i}
-                        onClick={() => setExpandedExp(expandedExp === i ? null : i)}
+          <section className="stagger-5">
+            <h2>{expLabel}</h2>
+            <div className="experience-list">
+              {experience.map((item, i) => (
+                <div className="experience-item" key={i}>
+                  <div className="experience-header">
+                    <div className="experience-title-row">
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="company"
                       >
-                        <div className="experience-header">
-                          <div className="experience-title-row">
-                            <a
-                              href={item.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="company"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              {item.company}
-                            </a>
-                            <p className="role">{item.role}</p>
-                          </div>
-                          <span className="date">
-                            {item.dates}
-                            <span className="experience-chevron" aria-hidden>›</span>
-                          </span>
-                        </div>
-                        <p className="desc">{item.description}</p>
-                        <div className="skills">
-                          {item.skills.map((s) => (
-                            <span key={s} className="skill-tag">{s}</span>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
+                        {item.company}
+                      </a>
+                      <p className="role">{item.role}</p>
+                    </div>
+                    <span className="date">{item.dates}</span>
                   </div>
-                </section>
-              </>
-            )}
+                </div>
+              ))}
+            </div>
+          </section>
 
-            {view === "contributions" && <Contributions headerReady={headerReady} />}
-          </div>
+          <section className="stagger-6 education-section">
+            <h2>{eduLabel}</h2>
+            <div className="experience-list">
+              {education.map((item, i) => (
+                <div className="experience-item education-item" key={i}>
+                  <div className="experience-header">
+                    <div className="experience-title-row">
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="company"
+                      >
+                        {item.school}
+                      </a>
+                      <p className="role">{item.degree}</p>
+                      <p className="role education-detail">{item.concentration}</p>
+                    </div>
+                    <span className="date">{item.dates}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
         </main>
       </div>
     </>
